@@ -1,32 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-// function Greeting() {
-//   return <h2>My First Component</h2>;
-// }
 function Greeting() {
   return (
-    <>
-      <div>
-        <h2>hello people</h2>
-        <ul>
-          <li>
-            <a href='#home'>hello world</a>
-          </li>
-        </ul>
-      </div>
-      <h2>hello world 2</h2>
-    </>
+    <div>
+      <Person />
+      <Message />
+    </div>
   );
 }
-// function Greeting() {
-//   return (
-//     <div>
-//       <h2>My First Component</h2>
-//     </div>
-//   );
 
-// }
+const Person = () => <h2>Talal Afaan</h2>;
+const Message = () => {
+  return <p>hey boys</p>;
+};
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(<Greeting />);
