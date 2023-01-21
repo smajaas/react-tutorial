@@ -4,7 +4,7 @@ import './index.css';
 
 const BookList = () => {
   return (
-    <section>
+    <section className='booklist'>
       <Book />
       <Book />
       <Book />
@@ -15,7 +15,7 @@ const BookList = () => {
 
 const Book = () => {
   return (
-    <article>
+    <article className='book'>
       <Image />
       <Title />
       <Author />
@@ -25,7 +25,7 @@ const Book = () => {
 
 const Image = () => (
   <img
-    src='https://m.media-amazon.com/images/I/71m+Qtq+HrL._AC_UY327_FMwebp_QL65_.jpg'
+    src='https://images-na.ssl-images-amazon.com/images/I/71m+Qtq+HrL._AC_UL900_SR900,600_.jpg'
     alt='Interesting Facts For Curious Minds'
   />
 );
