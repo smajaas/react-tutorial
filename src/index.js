@@ -12,27 +12,19 @@ const BookList = () => {
     </section>
   );
 };
-
+const author = 'Colleen Hoover';
 const Book = () => {
+  const title = 'It Starts with Us';
+
   return (
     <article className='book'>
-      <Image />
-      <Title />
-      <Author />
+      <img src='./Images/book-1.jpg' alt='It Starts with Us' />
+      <h2>{title}</h2>
+      <h4>{author}</h4>
     </article>
   );
 };
 
-const Image = () => (
-  <img
-    src='https://images-na.ssl-images-amazon.com/images/I/71m+Qtq+HrL._AC_UL900_SR900,600_.jpg'
-    alt='Interesting Facts For Curious Minds'
-  />
-);
-const Title = () => <h2>Interesting Facts For Curious Minds</h2>;
-const Author = () => {
-  return <h4>Jordan Moore</h4>;
-};
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(<BookList />);
