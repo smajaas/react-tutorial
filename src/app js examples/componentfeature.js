@@ -10,39 +10,33 @@ const books = [
     id: 1,
   },
   {
-    author: 'Peter Lynch',
-    title: 'One Upon the Wall Street',
-    img: 'https://m.media-amazon.com/images/I/71pvFCvMM2L._AC_UY327_FMwebp_QL65_.jpg',
+    author: 'Trey Gowdy',
+    title: 'Start, Stay, or Leave',
+    img: 'https://m.media-amazon.com/images/I/41qGiu+6bpL._SX331_BO1,204,203,200_.jpg',
     id: 2,
   },
 ];
 
 const BookList = () => {
-  const getBook = (id) => {
-    const book = books.find((book) => book.id === id);
-    console.log(book);
-  };
   return (
     <section className='booklist'>
       {books.map((book) => {
-        return <Book {...book} key={book.id} getBook={getBook} />;
+        return <Book {...book} key={book.id} />;
       })}
     </section>
   );
 };
 
 const Book = (props) => {
-  const { img, title, author, getBook, id } = props;
-  // console.log(props);
-  const getSingleBook = () => {
-    getBook(id);
+  const { img, title, author } = props;
+  const displayTitle = () => {
+    console.log(title);
   };
   return (
     <article className='book'>
       <img src={img} alt={title} />
       <h2>{title}</h2>
-      <button onClick={() => getBook(id)}>click me</button>
-
+      <button onClick={displayTitle}>display title</button>
       <h4>{author}</h4>
     </article>
   );
